@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc build linear_programming_example",
+            "command": "gcc",
+            "args": [
+                "-Iinclude",
+                "-g",
+                "linear_programming_example.c",
+                "src/linear_programming/helper_functions.c",
+                "src/linear_programming/simplex.c",
+                "-o",
+                "bin/linear_programming_example"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}
